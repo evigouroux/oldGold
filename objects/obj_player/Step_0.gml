@@ -20,3 +20,38 @@ y += _dir_y * _vitesse;
 if (place_meeting(x, y, obj_tileWall)) {
     y -= _dir_y * _vitesse;
 }
+
+// Petits bons rigolos si on est en mouvement
+z = max (z + zSpeed, 0);
+if (z == 0 && (abs(_dir_x) > 0 || abs(_dir_y) > 0)) {
+	zSpeed = 1;
+	instance_create_depth(x, y, -1, obj_dust);
+}
+else if (z > 0) {
+	zSpeed -= 0.25;
+}
+
+if (sign(_dir_x) == 0 && sign(_dir_y) == -1) {
+	image_index = 0;
+}
+else if (sign(_dir_x) == 1 && sign(_dir_y) == -1) {
+	image_index = 1;
+}
+else if (sign(_dir_x) == 1 && sign(_dir_y) == 0) {
+	image_index = 2;
+}
+else if (sign(_dir_x) == 1 && sign(_dir_y) == 1) {
+	image_index = 3;
+}
+else if (sign(_dir_x) == 0 && sign(_dir_y) == 1) {
+	image_index = 4;
+}
+else if (sign(_dir_x) == -1 && sign(_dir_y) == 1) {
+	image_index = 5;
+}
+else if (sign(_dir_x) == -1 && sign(_dir_y) == 0) {
+	image_index = 6;
+}
+else if (sign(_dir_x) == -1 && sign(_dir_y) == -1) {
+	image_index = 7;
+}

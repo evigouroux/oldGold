@@ -26,6 +26,7 @@
   "name":"OldGold",
   "resources":[
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
+    {"id":{"name":"obj_dust","path":"objects/obj_dust/obj_dust.yy",},},
     {"id":{"name":"obj_mineManager","path":"objects/obj_mineManager/obj_mineManager.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_tile","path":"objects/obj_tile/obj_tile.yy",},},
@@ -38,7 +39,9 @@
     {"id":{"name":"generateRandomMap","path":"scripts/generateRandomMap/generateRandomMap.yy",},},
     {"id":{"name":"perlinNoise","path":"scripts/perlinNoise/perlinNoise.yy",},},
     {"id":{"name":"setTileSprite","path":"scripts/setTileSprite/setTileSprite.yy",},},
+    {"id":{"name":"spr_dust","path":"sprites/spr_dust/spr_dust.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_playerShadow","path":"sprites/spr_playerShadow/spr_playerShadow.yy",},},
     {"id":{"name":"spr_tileMine_Ground","path":"sprites/spr_tileMine_Ground/spr_tileMine_Ground.yy",},},
     {"id":{"name":"spr_tileMine_Wall","path":"sprites/spr_tileMine_Wall/spr_tileMine_Wall.yy",},},
     {"id":{"name":"Sprite4","path":"sprites/Sprite4/Sprite4.yy",},},
