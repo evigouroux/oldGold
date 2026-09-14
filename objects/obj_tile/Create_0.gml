@@ -1,0 +1,1 @@
+setTileSprite(id, true);

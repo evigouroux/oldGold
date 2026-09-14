@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_tileMine_Ground",
+    "path":"sprites/spr_tileMine_Ground/spr_tileMine_Ground.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
