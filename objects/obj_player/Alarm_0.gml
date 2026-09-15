@@ -1,0 +1,1 @@
+onCooldown = false;

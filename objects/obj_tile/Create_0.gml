@@ -1,1 +1,1 @@
-setTileSprite(id, true);
+tileType = tileTypes.grounds;

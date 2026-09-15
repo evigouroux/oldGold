@@ -11,10 +11,10 @@ function setTileSprite(tile, propagate){
 	var northNeighbor = instance_position(tile.x + tileSize*0.5, tile.y - tileSize*0.5, obj_tile);
 	var southNeighbor = instance_position(tile.x + tileSize*0.5, tile.y + tileSize*1.5, obj_tile);
 
-	var contactW = !instance_exists(westNeighbor) || westNeighbor.object_index != tile.object_index;
-	var contactE = !instance_exists(eastNeighbor) || eastNeighbor.object_index != tile.object_index;
-	var contactN = !instance_exists(northNeighbor) || northNeighbor.object_index != tile.object_index;
-	var contactS = !instance_exists(southNeighbor) || southNeighbor.object_index != tile.object_index;
+	var contactW = !instance_exists(westNeighbor) || westNeighbor.tileType != tile.tileType;
+	var contactE = !instance_exists(eastNeighbor) || eastNeighbor.tileType != tile.tileType;
+	var contactN = !instance_exists(northNeighbor) || northNeighbor.tileType != tile.tileType;
+	var contactS = !instance_exists(southNeighbor) || southNeighbor.tileType != tile.tileType;
 	
 	if (contactW && contactN && contactE && !contactS) {
 		tile.image_index = 0;	
@@ -65,7 +65,7 @@ function setTileSprite(tile, propagate){
 		tile.image_index = 15;
 	}
 	
-	if (propagate || tile.image_index != startingIndex) {
+	if (propagate && tile.image_index != startingIndex) {
 		setTileSprite(northNeighbor, false);
 		setTileSprite(southNeighbor, false);
 		setTileSprite(eastNeighbor, false);

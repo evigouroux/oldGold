@@ -1,3 +1,10 @@
+
+if (pushBackSpeed > 0) {
+	x = x + lengthdir_x(pushBackSpeed, pushBack);
+	y = y + lengthdir_y(pushBackSpeed, pushBack);
+	pushBackSpeed = max (0, pushBackSpeed -1);
+}
+
 var _vitesse = 1.3;
 
 var _dir_x = keyboard_check(vk_right) - keyboard_check(vk_left);
@@ -22,7 +29,7 @@ if (place_meeting(x, y, obj_tileWall)) {
 }
 
 // Petits bons rigolos si on est en mouvement
-z = max (z + zSpeed, 0);
+z = min(max (z + zSpeed, 0), 8);
 if (z == 0 && (abs(_dir_x) > 0 || abs(_dir_y) > 0)) {
 	zSpeed = 1;
 	instance_create_depth(x, y, -1, obj_dust);
