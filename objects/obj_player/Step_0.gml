@@ -1,4 +1,4 @@
-var _vitesse = 2;
+var _vitesse = 1.3;
 
 var _dir_x = keyboard_check(vk_right) - keyboard_check(vk_left);
 var _dir_y = keyboard_check(vk_down) - keyboard_check(vk_up);
