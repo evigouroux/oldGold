@@ -1,21 +1,22 @@
 function generateMine(){
 	
+	global.mapSeed = random_range(-5000.0, 5000.0);
 	mine = [];
 	holePlaced = false;
 	
-	for (var i = 0; i < room_width/tileSize; i ++) {
+	for (var i = 0; i < mapSize/tileSize; i ++) {
 		mine[i] = [];
-		for (var j = 0; j < room_height/tileSize; j ++) {
+		for (var j = 0; j < mapSize/tileSize; j ++) {
 			
 			var gridX = i;
 			var gridY = j;
 			var elevation = generateElevationCoordinates(0.8*gridX, 0.8*gridY);
-			var border = i == 0 || j == 0 || i == (room_width/tileSize)-1 || j == (room_height/tileSize)-1;
-			var center = point_distance(gridX, gridY, (room_width/tileSize/2), (room_height/tileSize/2)) < 3;
+			var border = i == 0 || j == 0 || i == (mapSize/tileSize)-1 || j == (mapSize/tileSize)-1;
+			var center = point_distance(gridX, gridY, (mapSize/tileSize/2), (mapSize/tileSize/2)) < 3;
 		
 			if (center || (elevation < 0.4 && !border)) {
 				
-				//if (!center && !holePlaced && point_distance(gridX, gridY, (room_width/tileSize/2), (room_height/tileSize/2)) > 8) {
+				//if (!center && !holePlaced && point_distance(gridX, gridY, (mapSize/tileSize/2), (mapSize/tileSize/2)) > 8) {
 				//	mine[i][j] = obj_tileHole;
 				//	holePlaced = true;
 				//}

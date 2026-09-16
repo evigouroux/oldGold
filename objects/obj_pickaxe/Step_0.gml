@@ -85,22 +85,7 @@ if (rotating) {
 			rotation = 0;
 			rotating = false;
 		
-			with(target) {
-				var tile = instance_create_depth(x, y, depth, obj_tileGround);
-				tile.gridX = gridX;
-				tile.gridY = gridY;
-				tile.image_index = image_index;
-				instance_destroy();
-				setTileSprite(tile, true);
-				obj_mineManager.mines[obj_mineManager.currentMine][gridX][gridY] = obj_tileGround;
-	
-				for (var i = 0; i < 5; i++) {
-					var rubble = instance_create_depth(x + tileSize/2 + irandom_range(-8, 8), y + tileSize/2 + irandom_range(-8, 8), -4, obj_rubble);
-					var facing = point_direction(rubble.x, rubble.y, obj_player.x, obj_player.y);
-					rubble.direction = irandom_range(facing * 0.70, facing * 1.30);
-					rubble.speed = 1.1;
-				}
-			}
+			destroyTile(target, obj_player.x, obj_player.y, false);
 		}
 	}
 }

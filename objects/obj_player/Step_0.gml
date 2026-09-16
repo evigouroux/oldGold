@@ -1,4 +1,12 @@
 
+if (instance_exists(obj_mineName)) {
+	exit;	
+}
+
+if (room == rm_camp) {
+	currentFacility = instance_nearest(x, y, obj_facility);
+}
+
 if (descending) {
 	
 	z += zSpeed;
@@ -13,12 +21,18 @@ if (descending) {
 	}
 	
 	if (z <= -8) {
-		with (obj_tile) {
-			instance_destroy();	
+		if (room == rm_camp) {
+			room_goto(rm_mine);
+			instance_destroy();
 		}
-		instance_destroy();
-		obj_mineManager.currentMine = 1;
-		loadMine(obj_mineManager.mines[1]);
+		else {
+			with (obj_tile) {
+				instance_destroy();	
+			}
+			instance_destroy();
+			obj_mineManager.currentMine++;
+			loadMine(obj_mineManager.mines[obj_mineManager.currentMine]);
+		}
 	}
 	exit;
 }
@@ -46,13 +60,13 @@ if (_dir_x != 0 || _dir_y != 0) {
 
 // Déplacement sur X, avec vérification de collision
 x += _dir_x * _vitesse;
-if (place_meeting(x, y, obj_tileWall)) {
+if (place_meeting(x, y, obj_tileWall) || place_meeting(x, y, obj_blocker)) {
 	x -= _dir_x * _vitesse; // 
 }
 
 // Déplacement sur Y, avec vérification de collision 
 y += _dir_y * _vitesse;
-if (place_meeting(x, y, obj_tileWall)) {
+if (place_meeting(x, y, obj_tileWall) || place_meeting(x, y, obj_blocker)) {
 	y -= _dir_y * _vitesse;
 }
 
