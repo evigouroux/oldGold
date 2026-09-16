@@ -1,9 +1,8 @@
-x = obj_player.x;
-y = obj_player.y - 8;
+
 
 switch(obj_player.image_index) {
 	case (0) :
-		image_angle = 90 + rotation;
+		image_angle = 90 - actualRotation;
 		depth = obj_player.depth +1;
 		image_index = 0;
 		image_yscale = 1;
@@ -11,7 +10,7 @@ switch(obj_player.image_index) {
 		target = instance_position(obj_player.x, obj_player.y-10, obj_tileWall);
 	break;
 	case (1) :
-		image_angle = 90 + rotation;
+		image_angle = 90 + actualRotation;
 		depth = obj_player.depth +1;
 		image_index = 1;
 		image_yscale = 1;
@@ -19,7 +18,7 @@ switch(obj_player.image_index) {
 		target = instance_position(obj_player.x+10, obj_player.y-10, obj_tileWall);
 	break;
 	case (2) :
-		image_angle = 0 + rotation;
+		image_angle = 0 + actualRotation;
 		depth = obj_player.depth -1;
 		image_index = 0;
 		image_yscale = 1;
@@ -27,7 +26,7 @@ switch(obj_player.image_index) {
 		target = instance_position(obj_player.x+10, obj_player.y-4, obj_tileWall);
 	break;
 	case (3) :
-		image_angle = 0 + rotation;
+		image_angle = 0 + actualRotation;
 		depth = obj_player.depth -1;
 		image_index = 1;
 		image_yscale = -1;
@@ -35,7 +34,7 @@ switch(obj_player.image_index) {
 		target = instance_position(obj_player.x+10, obj_player.y+10, obj_tileWall);
 	break;
 	case (4) :
-		image_angle = 270 + rotation;
+		image_angle = 270 + actualRotation;
 		depth = obj_player.depth -1;
 		image_index = 0;
 		image_yscale = 1;
@@ -43,7 +42,7 @@ switch(obj_player.image_index) {
 		target = instance_position(obj_player.x, obj_player.y+10, obj_tileWall);
 	break;
 	case (5) :
-		image_angle = 270 + rotation;
+		image_angle = 270 - actualRotation;
 		depth = obj_player.depth -1;
 		image_index = 1;
 		image_yscale = -1;
@@ -51,7 +50,7 @@ switch(obj_player.image_index) {
 		target = instance_position(obj_player.x-10, obj_player.y+10, obj_tileWall);
 	break;
 	case (6) :
-		image_angle = 180 - rotation;
+		image_angle = 180 - actualRotation;
 		depth = obj_player.depth -1;
 		image_index = 0;
 		image_yscale = -1;
@@ -59,7 +58,7 @@ switch(obj_player.image_index) {
 		target = instance_position(obj_player.x-10, obj_player.y-4, obj_tileWall);
 	break;
 	case (7) :
-		image_angle = 180 + rotation;
+		image_angle = 180 - actualRotation;
 		depth = obj_player.depth +1;
 		image_index = 1;
 		image_xscale = 1;
@@ -70,6 +69,7 @@ switch(obj_player.image_index) {
 
 if (rotating) {
 	rotation -= 22.5;
+	actualRotation = 45 * round(rotation/45);
 	if (rotation <= -360) {
 		rotation = 0;
 		rotating = false;
@@ -86,12 +86,13 @@ if (rotating) {
 			rotating = false;
 		
 			with(target) {
-				instance_destroy();
 				var tile = instance_create_depth(x, y, depth, obj_tileGround);
-
+				tile.gridX = gridX;
+				tile.gridY = gridY;
 				tile.image_index = image_index;
+				instance_destroy();
 				setTileSprite(tile, true);
-				obj_mineManager.mines[obj_mineManager.currentMine] = obj_tileGround;
+				obj_mineManager.mines[obj_mineManager.currentMine][gridX][gridY] = obj_tileGround;
 	
 				for (var i = 0; i < 5; i++) {
 					var rubble = instance_create_depth(x + tileSize/2 + irandom_range(-8, 8), y + tileSize/2 + irandom_range(-8, 8), -4, obj_rubble);

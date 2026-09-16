@@ -15,7 +15,11 @@ function generateMine(){
 		
 			if (center || (elevation < 0.4 && !border)) {
 				
-				if (!center && !holePlaced && point_distance(gridX, gridY, (room_width/tileSize/2), (room_height/tileSize/2)) > 8) {
+				//if (!center && !holePlaced && point_distance(gridX, gridY, (room_width/tileSize/2), (room_height/tileSize/2)) > 8) {
+				//	mine[i][j] = obj_tileHole;
+				//	holePlaced = true;
+				//}
+				if (center && !holePlaced) {
 					mine[i][j] = obj_tileHole;
 					holePlaced = true;
 				}

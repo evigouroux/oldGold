@@ -1,4 +1,5 @@
 rotation = 0;
+actualRotation = 0;
 rotating = false;
 shocked = false;
 pushBack = 0;

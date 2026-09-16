@@ -1,5 +1,10 @@
 
-if (!obj_pickaxe.rotating && !onCooldown) {
+
+
+if (!onCooldown) {
+	equiped = obj_pistol;
 	onCooldown = true;
-	obj_pickaxe.rotating = true;
+	with(obj_pistol) {
+		event_user(0);	
+	}
 }

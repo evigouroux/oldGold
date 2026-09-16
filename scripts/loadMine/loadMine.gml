@@ -1,7 +1,9 @@
 function loadMine(mine){
 	for (var i = 0; i < room_width/tileSize; i ++) {
 		for (var j = 0; j < room_height/tileSize; j ++) {
-			instance_create_depth(i*tileSize, j*tileSize, 0, mine[i][j]);	
+			var tile = instance_create_depth(i*tileSize, j*tileSize, 0, mine[i][j]);
+			tile.gridX = i;
+			tile.gridY = j;
 		}
 	}
 
