@@ -1,8 +1,8 @@
-if (secondary == obj_pistol) {
-	secondary = obj_dynamite;
-	equiped = secondary;
+if (obj_mineManager.secondary == obj_pistol) {
+	obj_mineManager.secondary = obj_dynamite;
+	obj_mineManager.equiped = obj_mineManager.secondary;
 }
 else {
-	secondary = obj_pistol;
-	equiped = secondary;
+	obj_mineManager.secondary = obj_pistol;
+	obj_mineManager.equiped = obj_mineManager.secondary;
 }

@@ -1,4 +1,8 @@
 
+if (instance_exists(obj_mineName) || instance_exists(obj_dialogue)) {
+	exit;	
+}
+
 if (descending) {
 	exit;	
 }
@@ -8,9 +12,9 @@ if (room == rm_camp) {
 }
 else {
 	if (!onCooldown) {
-		equiped = secondary;
+		obj_mineManager.equiped = obj_mineManager.secondary;
 		onCooldown = true;
-		with(secondary) {
+		with(obj_mineManager.secondary) {
 			event_user(0);	
 		}
 	}

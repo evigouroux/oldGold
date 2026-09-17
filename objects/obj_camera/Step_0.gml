@@ -17,3 +17,5 @@ _new_x = clamp(_new_x, 0, room_width - cam_width);
 _new_y = clamp(_new_y, 0, room_height - cam_height);
 
 camera_set_view_pos(cam, _new_x, _new_y);
+x = _new_x;
+y = _new_y;

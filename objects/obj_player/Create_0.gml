@@ -10,7 +10,5 @@ pickaxeCooldown = game_get_speed(gamespeed_fps)/5;
 onCooldown = false;
 descending = false;
 shrinkage = 0;
-equiped = obj_pickaxe;
-secondary = obj_pistol;
 currentFacility = noone;
 facilityRange = 8;
