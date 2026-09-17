@@ -16,6 +16,7 @@ else if (image_yscale < 1) {
 	image_yscale += 0.05;
 	image_xscale -= 0.05;
 	if (image_yscale == 1) {
-		room_goto(rm_test);	
+		alarm[0] = game_get_speed(gamespeed_fps);
 	}
+	
 }
