@@ -1,5 +1,5 @@
 
-if (instance_exists(obj_mineName)) {
+if (instance_exists(obj_mineName) || instance_exists(obj_dialogue)) {
 	exit;	
 }
 
