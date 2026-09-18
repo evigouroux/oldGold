@@ -29,7 +29,7 @@ function generateMine(){
 				}
 			}
 			else {
-				mine[i][j] = obj_tileWall;
+				mine[i][j] = obj_tileWallGold;
 			}		
 		}
 	}
