@@ -5,4 +5,11 @@ instance_create_depth(obj_player.x + lengthdir_x(6, 180 + pushBack), (obj_player
 obj_player.pushBack = pushBack;
 obj_player.pushBackSpeed = 2;
 obj_player.zSpeed = 2;
+obj_mineManager.dynamiteStash --;
+
+if (obj_mineManager.dynamiteStash <= 0) {
+	obj_mineManager.secondary = obj_pistol;
+	obj_mineManager.equiped = obj_pickaxe;
+}
+
 fired = true;

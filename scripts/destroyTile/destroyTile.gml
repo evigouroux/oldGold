@@ -6,6 +6,8 @@ function destroyTile(target, sourceX, sourceY, interior){
 			return -1;	
 		}
 		
+		obj_mineManager.cash ++;
+		
 		var tile = instance_create_depth(x, y, depth, obj_tileGround);
 		tile.gridX = gridX;
 		tile.gridY = gridY;

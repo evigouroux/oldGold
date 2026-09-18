@@ -6,3 +6,4 @@ obj_player.pushBack = pushBack;
 obj_player.pushBackSpeed = 2;
 obj_player.zSpeed = 1;
 fired = true;
+audio_play_sound(SFX_shoot, 1, false);
