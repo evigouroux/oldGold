@@ -17,3 +17,4 @@ charSpeed = 1;
 ready = false
 
 alarm_set(1, game_get_speed(gamespeed_fps));
+audio_play_sound(let_s_ride, 1, false);

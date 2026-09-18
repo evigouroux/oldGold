@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"Random293",
+  "%Name":"Hit23",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.92931974,
+  "duration":0.09786848,
   "exportDir":"",
-  "name":"Random293",
+  "name":"Hit23",
   "parent":{
     "name":"Sounds",
     "path":"folders/Old gold/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"Random293.wav",
+  "soundFile":"Hit23.wav",
   "volume":1.0,
 }
