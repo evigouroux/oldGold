@@ -1,18 +1,18 @@
 {
   "$GMSound":"v2",
-  "%Name":"Random293",
+  "%Name":"sound_start",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "channelFormat":1,
+  "channelFormat":0,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.92931974,
+  "duration":1.1040136,
   "exportDir":"",
-  "name":"Random293",
+  "name":"sound_start",
   "parent":{
     "name":"Sounds",
     "path":"folders/Old gold/Sounds.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"Random293.wav",
+  "soundFile":"sound_start.mp3",
   "volume":1.0,
 }
