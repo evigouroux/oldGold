@@ -13,7 +13,10 @@
     "name":"Objects",
     "path":"folders/Old gold/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_nugget",
+    "path":"objects/obj_nugget/obj_nugget.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

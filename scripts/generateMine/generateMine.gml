@@ -1,8 +1,9 @@
-function generateMine(){
+function generateMine(mineDepth){
 	
 	global.mapSeed = random_range(-5000.0, 5000.0);
 	mine = [];
-	holePlaced = false;
+	var holePlaced = false;
+	var baseElevation = 0.02 * mineDepth;
 	
 	for (var i = 0; i < mapSize/tileSize; i ++) {
 		mine[i] = [];
@@ -10,17 +11,14 @@ function generateMine(){
 			
 			var gridX = i;
 			var gridY = j;
-			var elevation = generateElevationCoordinates(0.8*gridX, 0.8*gridY);
+			var elevation = generateElevationCoordinates(0.8*gridX, 0.8*gridY) + baseElevation ;
 			var border = i == 0 || j == 0 || i == (mapSize/tileSize)-1 || j == (mapSize/tileSize)-1;
 			var center = point_distance(gridX, gridY, (mapSize/tileSize/2), (mapSize/tileSize/2)) < 3;
+			var outerCenter = point_distance(gridX, gridY, (mapSize/tileSize/2), (mapSize/tileSize/2)) > 3 && point_distance(gridX, gridY, (mapSize/tileSize/2), (mapSize/tileSize/2)) < 7;
+			var dice = irandom_range(1, 100);
 		
 			if (center || (elevation < 0.4 && !border)) {
-				
-				//if (!center && !holePlaced && point_distance(gridX, gridY, (mapSize/tileSize/2), (mapSize/tileSize/2)) > 8) {
-				//	mine[i][j] = obj_tileHole;
-				//	holePlaced = true;
-				//}
-				if (center && !holePlaced) {
+				if (outerCenter && !holePlaced && dice < 10) {
 					mine[i][j] = obj_tileHole;
 					holePlaced = true;
 				}
@@ -28,10 +26,17 @@ function generateMine(){
 					mine[i][j] = obj_tileGround;
 				}
 			}
-			else {
+			else if (!center && !border && elevation >= 0.4 && elevation < 0.5 && dice < 20) {
 				mine[i][j] = obj_tileWallGold;
+			}
+			else {
+				mine[i][j] = obj_tileWall;
 			}		
 		}
+	}
+	
+	if (!holePlaced) {
+		mine[round(mapSize/tileSize/2) + choose(-5, -10, 5, 10)][round(mapSize/tileSize/2) + choose(-5, -10, 5, 10)] = obj_tileHole;	
 	}
 	
 	return mine;

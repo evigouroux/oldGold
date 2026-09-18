@@ -1,5 +1,5 @@
 if (currentID >= array_length(content)) {
-	room_goto(rm_camp);
+	room_goto(rm_main);
 }
 else {
 	currentID ++;

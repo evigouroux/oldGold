@@ -29,6 +29,9 @@ if (descending) {
 			with (obj_tile) {
 				instance_destroy();	
 			}
+			with(obj_nugget) {
+				instance_destroy();	
+			}
 			instance_destroy();
 			obj_mineManager.currentMine++;
 			loadMine(obj_mineManager.mines[obj_mineManager.currentMine]);

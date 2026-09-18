@@ -6,8 +6,6 @@ function destroyTile(target, sourceX, sourceY, interior){
 			return -1;	
 		}
 		
-		obj_mineManager.cash ++;
-		
 		var tile = instance_create_depth(x, y, depth, obj_tileGround);
 		tile.gridX = gridX;
 		tile.gridY = gridY;
@@ -19,7 +17,7 @@ function destroyTile(target, sourceX, sourceY, interior){
 		if (object_index == obj_tileWallGold) {
 			for (var i = 0; i < irandom_range(1,4); i++) {
 				nugget_type = choose (obj_largeNugget1, obj_largeNugget2, obj_smallNugget1, obj_smallNugget2) 
-				var nugget = instance_create_depth(x + tileSize/2 + irandom_range(-8, 8), y + tileSize/2 + irandom_range(-8, 8), -4, nugget_type);
+				var nugget = instance_create_depth(x + tileSize/2 + irandom_range(-8, 8), y + tileSize/2 + irandom_range(-8, 8), -1, nugget_type);
 				var facing = point_direction(nugget.x, nugget.y, sourceX, sourceY);
 				nugget.direction = irandom_range(facing * 0.70, facing * 1.30);
 				if (interior) {
