@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Random16",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.25331065,
+  "exportDir":"",
+  "name":"Random16",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Old gold/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Random16.wav",
+  "volume":1.0,
+}

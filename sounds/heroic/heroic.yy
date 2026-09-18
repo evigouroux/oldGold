@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"heroic",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":32.088005,
+  "exportDir":"",
+  "name":"heroic",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Old gold/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"heroic.mp3",
+  "volume":1.0,
+}
