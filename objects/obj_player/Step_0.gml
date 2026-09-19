@@ -22,6 +22,7 @@ if (descending) {
 	
 	if (z <= -8) {
 		if (room == rm_camp) {
+			audio_stop_sound(camp_music_x10);
 			room_goto(rm_mine);
 			instance_destroy();
 		}

@@ -1,0 +1,1 @@
+audio_play_sound(imtiredboss, 1, true);
