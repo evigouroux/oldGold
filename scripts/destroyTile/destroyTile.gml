@@ -1,5 +1,6 @@
 function destroyTile(target, sourceX, sourceY, interior){
-
+	
+	audio_play_sound(Hit23, 1, false);
 	with(target) {
 		
 		if (indestructible) {
@@ -36,6 +37,7 @@ function destroyTile(target, sourceX, sourceY, interior){
 			}
 			rubble.speed = 1.1;
 		}
+		
 		
 			
 			

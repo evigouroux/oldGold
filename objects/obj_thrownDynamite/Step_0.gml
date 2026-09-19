@@ -5,6 +5,8 @@ zSpeed -= 0.1;
 if (z < 0) {
 	instance_destroy();
 	
+	audio_play_sound(Boom27, 1, false);
+	
 	var list = ds_list_create();
 	collision_circle_list(x, y, 32, obj_tileWall, false, true, list, false);
 	for (var i = 0; i < ds_list_size(list); i++) {

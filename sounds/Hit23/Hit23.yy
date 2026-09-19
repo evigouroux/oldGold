@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Hit23",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.09786848,
+  "exportDir":"",
+  "name":"Hit23",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Old gold/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Hit23.wav",
+  "volume":1.0,
+}
