@@ -119,6 +119,7 @@
     {"id":{"name":"Random422","path":"sounds/Random422/Random422.yy",},},
     {"id":{"name":"Random75","path":"sounds/Random75/Random75.yy",},},
     {"id":{"name":"Random92","path":"sounds/Random92/Random92.yy",},},
+    {"id":{"name":"SFX_boing","path":"sounds/SFX_boing/SFX_boing.yy",},},
     {"id":{"name":"SFX_jump","path":"sounds/SFX_jump/SFX_jump.yy",},},
     {"id":{"name":"SFX_shoot","path":"sounds/SFX_shoot/SFX_shoot.yy",},},
     {"id":{"name":"SFX_voice","path":"sounds/SFX_voice/SFX_voice.yy",},},

@@ -10,6 +10,7 @@
     {"name":"Hit26","order":2,"path":"sounds/Hit26/Hit26.yy",},
     {"name":"Hit32","order":1,"path":"sounds/Hit32/Hit32.yy",},
     {"name":"let_s_ride","order":1,"path":"sounds/let_s_ride/let_s_ride.yy",},
+    {"name":"SFX_boing","order":1,"path":"sounds/SFX_boing/SFX_boing.yy",},
     {"name":"sound_start","order":5,"path":"sounds/sound_start/sound_start.yy",},
     {"name":"spr_aToPlay","order":4,"path":"sprites/spr_aToPlay/spr_aToPlay.yy",},
     {"name":"spr_main","order":1,"path":"sprites/spr_main/spr_main.yy",},

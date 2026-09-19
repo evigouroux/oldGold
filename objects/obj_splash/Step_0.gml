@@ -2,6 +2,7 @@ if (y < room_height*0.6) {
 	y = min(y +2, room_height*0.6);
 	if (y == room_height*0.6) {
 		splotch = true;
+		audio_play_sound(SFX_boing, 1, false);
 	}
 }
 
