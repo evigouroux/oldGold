@@ -3,6 +3,9 @@ var _vitesse = 1;
 var _dir_x = 0;
 var _dir_y = 0;
 
+if (instance_exists(obj_dialogue)) {
+	exit;	
+}
 
 
 if (distance_to_point(room_width/2, room_height/2) > 160) {
