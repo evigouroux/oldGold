@@ -8,7 +8,7 @@ function loadMine(mine){
 			
 			if (!center && mine[i][j] == obj_tileGround) {
 				var dice = irandom_range(1, 100);
-				if (obj_mineManager.currentMine == 6 && dice < min(obj_mineManager.currentMine*2, 4)) {
+				if (obj_mineManager.currentMine < 6 && dice < min(obj_mineManager.currentMine*2, 4)) {
 					instance_create_depth(i*tileSize + tileSize/2, j*tileSize + tileSize/2, 0, obj_ghost);
 				}
 			}
