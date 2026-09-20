@@ -29,4 +29,10 @@ function loadMine(mine){
 	instance_create_depth(room_width/2 + tileSize/2, room_height/2 + tileSize/2, -5, obj_mineName);
 	var player = instance_create_depth(room_width/2 + tileSize/2, room_height/2 + tileSize/2, -2, obj_player);
 	player.image_index = 4;
+	
+	if (depth == 7) {
+		instance_create_depth(obj_player.x, obj_player.y - 32, obj_player.depth, obj_elderSam);
+		instance_create_depth(obj_player.x, obj_player.y, obj_player.depth, obj_elderSamDialogue);
+	}
+	
 }

@@ -7,6 +7,7 @@
     {"name":"obj_campDemolitionist","order":7,"path":"objects/obj_campDemolitionist/obj_campDemolitionist.yy",},
     {"name":"obj_demolitionistDialogue","order":8,"path":"objects/obj_demolitionistDialogue/obj_demolitionistDialogue.yy",},
     {"name":"obj_elderSam","order":15,"path":"objects/obj_elderSam/obj_elderSam.yy",},
+    {"name":"obj_elderSamDialogue","order":18,"path":"objects/obj_elderSamDialogue/obj_elderSamDialogue.yy",},
     {"name":"obj_ending0","order":11,"path":"objects/obj_ending0/obj_ending0.yy",},
     {"name":"obj_ending1","order":12,"path":"objects/obj_ending1/obj_ending1.yy",},
     {"name":"obj_ending2","order":13,"path":"objects/obj_ending2/obj_ending2.yy",},

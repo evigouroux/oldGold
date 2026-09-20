@@ -10,7 +10,7 @@ for (var i = 0; i < 10; i++) {
 
 currentMine = 0;
 maxMine = 0;
-cash = 90;
+cash = 40;
 cashCurrent = 0;
 displayedCash = cash;
 dynamiteStash = 2;

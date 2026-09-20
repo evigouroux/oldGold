@@ -28,7 +28,7 @@ function generateMine(mineDepth){
 		}
 	}
 	
-	if (depth < 7) {
+	if (mineDepth < 7) {
 		var xShift = choose(-1, 1) * irandom_range(5, 8);
 		var yShift = choose(-1, 1) * irandom_range(5, 8);
 		mine[round(mapSize/tileSize/2) + xShift][round(mapSize/tileSize/2) + yShift] = obj_tileHole;	

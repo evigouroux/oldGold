@@ -9,6 +9,5 @@ if (pushBackSpeed > 0) {
 	pushBackSpeed = max (0, pushBackSpeed -1);
 }
 
-
 // Flottement inquiétant
 z += sin(current_time/500)/8;
