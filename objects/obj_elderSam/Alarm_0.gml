@@ -1,0 +1,2 @@
+
+attackReady = true;

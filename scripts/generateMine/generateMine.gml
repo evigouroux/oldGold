@@ -2,7 +2,7 @@ function generateMine(mineDepth){
 	
 	global.mapSeed = random_range(-5000.0, 5000.0);
 	mine = [];
-	var baseElevation = 0.02 * mineDepth;
+	var baseElevation = 0.01 * mineDepth;
 	
 	for (var i = 0; i < mapSize/tileSize; i ++) {
 		mine[i] = [];
@@ -27,18 +27,20 @@ function generateMine(mineDepth){
 			}		
 		}
 	}
-		
-	var xShift = choose(-1, 1) * irandom_range(5, 8);
-	var yShift = choose(-1, 1) * irandom_range(5, 8);
-	mine[round(mapSize/tileSize/2) + xShift][round(mapSize/tileSize/2) + yShift] = obj_tileHole;	
 	
-	xShift = choose(-1, 1) * irandom_range(8, 12);
-	yShift = choose(-1, 1) * irandom_range(8, 12);
-	mine[round(mapSize/tileSize/2) + xShift][round(mapSize/tileSize/2) + yShift] = obj_tileHole;
+	if (depth < 7) {
+		var xShift = choose(-1, 1) * irandom_range(5, 8);
+		var yShift = choose(-1, 1) * irandom_range(5, 8);
+		mine[round(mapSize/tileSize/2) + xShift][round(mapSize/tileSize/2) + yShift] = obj_tileHole;	
 	
-	xShift = choose(-1, 1) * irandom_range(8, 12);
-	yShift = choose(-1, 1) * irandom_range(8, 12);
-	mine[round(mapSize/tileSize/2) + xShift][round(mapSize/tileSize/2) + yShift] = obj_tileHole;
+		xShift = choose(-1, 1) * irandom_range(8, 12);
+		yShift = choose(-1, 1) * irandom_range(8, 12);
+		mine[round(mapSize/tileSize/2) + xShift][round(mapSize/tileSize/2) + yShift] = obj_tileHole;
+	
+		xShift = choose(-1, 1) * irandom_range(8, 12);
+		yShift = choose(-1, 1) * irandom_range(8, 12);
+		mine[round(mapSize/tileSize/2) + xShift][round(mapSize/tileSize/2) + yShift] = obj_tileHole;
+	}
 	
 	return mine;
 }

@@ -33,6 +33,8 @@ switch(obj_player.image_index) {
 	break;
 }
 
+alarm[0] = game_get_speed(gamespeed_fps);
+
 instance_create_depth(x, y, depth-1, obj_bang);
 
 speed = 2.5;

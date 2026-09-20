@@ -7,4 +7,8 @@ x = obj_player.x;
 y = obj_player.y;
 depth = -9;
 
+with (obj_ghost) {
+	instance_destroy();	
+}
+
 audio_stop_all();

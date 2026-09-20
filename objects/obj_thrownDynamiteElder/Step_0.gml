@@ -13,14 +13,15 @@ if (z < 0) {
 		var current = list[|i];
 		destroyTile(current, x, y, true);
 	}
-	
-	collision_circle_list(x, y, 32, obj_ghost, false, true, list, false);
-	for (var i = 0; i < ds_list_size(list); i++) {
-		var current = list[|i];
-		instance_destroy(current);
-	}
-	
 	ds_list_destroy(list);
+	
+	var player = collision_circle(x, y, 32, obj_player, false, true);
+	if (instance_exists(player)) {
+		obj_mineManager.cash -= 15;
+		player.pushBack = point_direction(x, y, player.x, player.y);
+		player.pushBackSpeed = 10;
+	}
+
 	
 	var explosionMain = instance_create_depth(x, y, depth, obj_explosion);
 	explosionMain.sprite_index = spr_explosionBig;

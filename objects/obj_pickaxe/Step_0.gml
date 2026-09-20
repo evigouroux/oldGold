@@ -76,7 +76,7 @@ switch(obj_player.image_index) {
 }
 
 if (rotating) {
-	rotation -= 22.5 + obj_mineManager.diggingSpeedLvl * 5;
+	rotation -= 22.5;
 	actualRotation = 45 * round(rotation/45);
 	if (rotation <= -360) {
 		rotation = 0;

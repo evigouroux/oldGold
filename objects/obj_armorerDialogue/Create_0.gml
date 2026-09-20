@@ -1,7 +1,7 @@
 // Inherit the parent event
 event_inherited();
 
-prices = [15, 30, 75, 100, 150];
+prices = [30, 50, 75, 100, 150];
 voice = 1.1;
 
 
