@@ -1,7 +1,16 @@
 // Inherit the parent event
 event_inherited();
 
-price = 6 + power(obj_mineManager.diggingSpeedLvl + 4, 3);
+prices = [25, 50, 50, 75, 100];
 voice = 1.4;
-content = "You ! My friend ! Come close !\n"+string(price) +" $ to tonify your digging speed !";
-content = string_wrap(content, textWidth);
+
+if (obj_mineManager.diggingSpeedLvl >= array_length(prices)) {
+	choice = false;
+	content = "You bought everything I had, friend !\n I'm all out !";
+	content = string_wrap(content, textWidth);
+}
+else {
+	price = prices[obj_mineManager.diggingSpeedLvl];
+	content = "You ! My friend ! Come close !\n"+string(price) +" $ to tonify your digging speed !";
+	content = string_wrap(content, textWidth);
+}

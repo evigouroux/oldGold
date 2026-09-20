@@ -2,7 +2,7 @@
 if (obj_mineManager.cash >= price) {
 
 	obj_mineManager.cash -= price;
-	obj_mineManager.diggingPowerLvl ++;
+	obj_mineManager.pistolLvl ++;
 	var dialogue = instance_create_depth(x, y, depth, obj_acceptanceDialogue);
 	dialogue.content = "Just like the founding father intended ! Give'em hell mate.";
 	dialogue.voice = voice;
