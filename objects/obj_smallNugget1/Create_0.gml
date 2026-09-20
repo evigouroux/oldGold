@@ -1,4 +1,9 @@
 z = 0.1;
 value = 2;
+
+if (obj_mineManager.currentMine >= 3) {
+	value ++;	
+}
+
 zSpeed = random_range(1.2,2);
 image_index = irandom_range(0, image_number-1);
