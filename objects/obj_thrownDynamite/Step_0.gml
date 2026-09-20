@@ -22,6 +22,13 @@ if (z < 0) {
 	
 	ds_list_destroy(list);
 	
+	var elder = collision_circle(x, y, 32, obj_elderSam, false, true);
+	if (instance_exists(elder)) {
+		elder.hP -= 15;
+		elder.pushBack = point_direction(x, y, elder.x, elder.y);
+		elder.pushBackSpeed = 10;
+	}
+	
 	var explosionMain = instance_create_depth(x, y, depth, obj_explosion);
 	explosionMain.sprite_index = spr_explosionBig;
 	

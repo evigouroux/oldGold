@@ -29,7 +29,7 @@ if (attackReady) {
 	var weaponChoice = choose(1,2);
 	alarm[weaponChoice] = game_get_speed(gamespeed_fps)*1
 	attackReady = false;
-	alarm[0] = game_get_speed(gamespeed_fps)*5;	
+	alarm[0] = game_get_speed(gamespeed_fps)*3;	
 }
 
 if (_dir_x != 0 || _dir_y != 0) {
