@@ -36,7 +36,6 @@ else if (state == 9) {
 		instance_destroy(obj_mineManager);
 	}
 	else if (obj_mineManager.loan <= 0) {
-		show_message(obj_mineManager.pistolLvl + obj_mineManager.diggingPowerLvl + obj_mineManager.diggingSpeedLvl);
 		if ((obj_mineManager.pistolLvl + obj_mineManager.diggingPowerLvl + obj_mineManager.diggingSpeedLvl) >= 12) {
 			room_goto(rm_ending2);
 			instance_destroy(obj_mineManager);

@@ -17,7 +17,7 @@ if (z < 0) {
 	
 	var player = collision_circle(x, y, 32, obj_player, false, true);
 	if (instance_exists(player)) {
-		obj_mineManager.cash -= 15;
+		obj_mineManager.cash = max (0, obj_mineManager.cash-15)
 		player.pushBack = point_direction(x, y, player.x, player.y);
 		player.pushBackSpeed = 10;
 	}

@@ -4,7 +4,7 @@ equiped = obj_pickaxe;
 secondary = obj_pistol;
 actualisingCash = 0;
 
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 7; i++) {
 	mines[i] = generateMine(i);
 }
 

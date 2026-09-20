@@ -8,7 +8,7 @@ function loadMine(mine){
 			
 			if (!center && mine[i][j] == obj_tileGround) {
 				var dice = irandom_range(1, 100);
-				if (dice < obj_mineManager.currentMine*2) {
+				if (obj_mineManager.currentMine == 6 && dice < min(obj_mineManager.currentMine*2, 4)) {
 					instance_create_depth(i*tileSize + tileSize/2, j*tileSize + tileSize/2, 0, obj_ghost);
 				}
 			}
@@ -30,7 +30,7 @@ function loadMine(mine){
 	var player = instance_create_depth(room_width/2 + tileSize/2, room_height/2 + tileSize/2, -2, obj_player);
 	player.image_index = 4;
 	
-	if (depth == 7) {
+	if (obj_mineManager.currentMine == 6) {
 		instance_create_depth(obj_player.x, obj_player.y - 32, obj_player.depth, obj_elderSam);
 		instance_create_depth(obj_player.x, obj_player.y, obj_player.depth, obj_elderSamDialogue);
 	}

@@ -31,4 +31,5 @@ switch(other.image_index) {
 audio_play_sound(SFX_steal, 1, false);
 other.pushBack = otherPushBack;
 other.pushBackSpeed = 8;
-obj_mineManager.cash -= 10;
+
+obj_mineManager.cash = max (0, obj_mineManager.cash-10);

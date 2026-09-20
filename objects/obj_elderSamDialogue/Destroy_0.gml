@@ -1,1 +1,1 @@
-obj_player.alarm[0] = game_get_speed(gamespeed_fps)*3;
+obj_elderSam.alarm[0] = game_get_speed(gamespeed_fps)*3;
