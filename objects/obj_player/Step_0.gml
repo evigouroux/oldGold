@@ -15,7 +15,7 @@ if (descending) {
 	if (zSpeed < 0 && shrinkage < 100) {
 		shrinkage += 2.7;
 		if (shrinkage > 65) {
-			sprite_index = spr_void;	
+			sprite_index = spr_void;
 		}
 		image_index = round(shrinkage * (sprite_get_number(spr_playerShrinking)-1) / 100);
 	}
@@ -33,6 +33,13 @@ if (descending) {
 			with(obj_nugget) {
 				instance_destroy();	
 			}
+			with(obj_ghost) {
+				instance_destroy();	
+			}
+			instance_destroy(obj_pickaxe);
+			instance_destroy(obj_pistol);
+			instance_destroy(obj_dynamite);
+			
 			instance_destroy();
 			obj_mineManager.currentMine++;
 			loadMine(obj_mineManager.mines[obj_mineManager.currentMine]);
