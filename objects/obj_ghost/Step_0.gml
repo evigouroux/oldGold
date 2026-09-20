@@ -1,5 +1,6 @@
 
 if (!active && distance_to_object(obj_player) < 64) {
+	audio_play_sound(SFX_ghostAggro, 1, false);
 	active = true;	
 }
 

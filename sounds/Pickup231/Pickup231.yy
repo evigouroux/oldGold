@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"Pickup231",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.33639455,
+  "exportDir":"",
+  "name":"Pickup231",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Old gold/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"Pickup231.wav",
+  "volume":1.0,
+}

@@ -95,7 +95,8 @@ if (rotating) {
 			obj_player.zSpeed = max(0, 2 - obj_mineManager.diggingSpeedLvl/10);
 			rotation = 0;
 			rotating = false;
-			audio_play_sound(Hit23, 1, false);
+			audio_play_sound(SFX_wallPickaxeHit, 1, false);
+			
 		
 			for (var i = 0; i < ds_list_size(list); i++) {
 				var current = list[|i];

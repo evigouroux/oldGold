@@ -6,11 +6,11 @@
     "path":"audiogroups/audiogroup_default",
   },
   "bitDepth":1,
-  "channelFormat":0,
+  "channelFormat":1,
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.23752834,
+  "duration":0.37385488,
   "exportDir":"",
   "name":"SFX_ghostHit",
   "parent":{
@@ -22,5 +22,5 @@
   "resourceVersion":"2.0",
   "sampleRate":44100,
   "soundFile":"SFX_ghostHit.wav",
-  "volume":1.0,
+  "volume":0.5,
 }

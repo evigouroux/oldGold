@@ -2,6 +2,7 @@
 if (obj_mineManager.cash >= price) {
 
 	obj_mineManager.cash -= price;
+	audio_play_sound(SFX_cashRegister, 1, false);
 	obj_mineManager.diggingSpeedLvl ++;
 	var dialogue = instance_create_depth(x, y, depth, obj_acceptanceDialogue);
 	dialogue.content = "Pleasure doing business with ya !\nHave a good one !";

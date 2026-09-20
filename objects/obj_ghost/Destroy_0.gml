@@ -1,0 +1,1 @@
+audio_play_sound(SFX_ghostDie, 1, false);

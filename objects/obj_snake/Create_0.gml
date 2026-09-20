@@ -1,0 +1,2 @@
+awake = false;
+aggro = false;

@@ -11,9 +11,9 @@ if (other.hP <= 0) {
 	instance_destroy(obj_mineBard);
 	audio_stop_all();
 	obj_player.alarm[1] = game_get_speed(gamespeed_fps)*10;
-	audio_play_sound(SFX_ghostDie, 1, false);
+	audio_play_sound(SFX_ghostDiePrevious, 1, false);
 }
 else {
-	audio_play_sound(SFX_ghostHit, 1, false);	
+	audio_play_sound(SFX_ghostHitPrevious, 1, false);	
 }
 

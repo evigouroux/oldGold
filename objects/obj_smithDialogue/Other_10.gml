@@ -2,6 +2,7 @@
 if (obj_mineManager.cash >= price) {
 
 	obj_mineManager.cash -= price;
+	audio_play_sound(SFX_cashRegister, 1, false);
 	obj_mineManager.diggingPowerLvl ++;
 	var dialogue = instance_create_depth(x, y, depth, obj_acceptanceDialogue);
 	dialogue.content = "Fine piece o' work if I do say so myself.";

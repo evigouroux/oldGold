@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"SFX_wallPickaxeHit",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.09786848,
+  "exportDir":"",
+  "name":"SFX_wallPickaxeHit",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Old gold/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SFX_wallPickaxeHit.wav",
+  "volume":0.6,
+}

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"SFX_ghostHitPrevious",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.23752834,
+  "exportDir":"",
+  "name":"SFX_ghostHitPrevious",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Old gold/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SFX_ghostHitPrevious.wav",
+  "volume":0.5,
+}
