@@ -1,6 +1,5 @@
 function destroyTile(target, sourceX, sourceY, interior){
 	
-	audio_play_sound(Hit23, 1, false);
 	with(target) {
 		
 		if (indestructible) {

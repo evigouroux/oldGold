@@ -1,7 +1,7 @@
 
 if (!descending) {
-	x = obj_tileHole.x + tileSize/2;
-	y = obj_tileHole.y + tileSize/2;
+	x = other.x + tileSize/2;
+	y = other.y + tileSize/2;
 	zSpeed = 2;
 	z += 0.1;
 	descending = true;

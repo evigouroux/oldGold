@@ -6,5 +6,4 @@ alarm[0] = game_get_speed(gamespeed_fps)/10;
 textWidth = sprite_width - 12;
 currentChar = 1;
 charSpeed = 1;
-content = string_wrap(content, textWidth);
 voice = 1;

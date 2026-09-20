@@ -12,7 +12,7 @@ if (ready) {
 		currentChar += charSpeed;
 	}
 	else if (alarm[0] <= 0) {
-		alarm_set(0, game_get_speed(gamespeed_fps)*2);	
+		alarm_set(0, game_get_speed(gamespeed_fps)*2.3);	
 	}
 
 	var displayedText = string_copy(current, 1, currentChar);

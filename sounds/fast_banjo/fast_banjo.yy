@@ -7,7 +7,7 @@
   },
   "bitDepth":1,
   "channelFormat":1,
-  "compression":0,
+  "compression":2,
   "compressionQuality":4,
   "conversionMode":0,
   "duration":24.048004,
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"fast_banjo.mp3",
+  "soundFile":"fast_banjo.wav",
   "volume":1.0,
 }

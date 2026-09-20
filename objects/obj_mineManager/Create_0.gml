@@ -11,9 +11,11 @@ for (var i = 0; i < 10; i++) {
 currentMine = 0;
 maxMine = 0;
 cash = 15;
+cashCurrent = 0;
 displayedCash = cash;
 dynamiteStash = 2;
 
 diggingSpeedLvl = 0;
 diggingPowerLvl = 0;
-loan = 9999;
+pistolLvl = 0;
+loan = 1000;

@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"SFX_timesUp",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":3,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":3.0720181,
+  "exportDir":"",
+  "name":"SFX_timesUp",
+  "parent":{
+    "name":"SFX",
+    "path":"folders/Old gold/SFX.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SFX_timesUp.mp3",
+  "volume":1.0,
+}

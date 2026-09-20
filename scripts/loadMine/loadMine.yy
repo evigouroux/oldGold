@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"loadMine",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Old gold/Scripts.yy",
+    "name":"Rooms",
+    "path":"folders/Old gold/Rooms.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
